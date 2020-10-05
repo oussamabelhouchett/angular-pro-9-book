@@ -12,7 +12,8 @@ import { StoreModule } from './store/StoreModule.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule
+    StoreModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
