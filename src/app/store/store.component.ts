@@ -35,11 +35,11 @@ export class StoreComponent {
       this.productsPerPage = Number(newSize);
       this.changePage(1);
       }
-   /*   get pageNumbers(): number[] {
+      get pageNumbers(): number[] {
       return Array(Math.ceil(this.repository
       .getProducts(this.selectedCategory).length / this.productsPerPage))
       .fill(0).map((x, i) => i + 1);
-      }*/
+      }
       addProductToCart(product: Product) {
         this.cart.addLine(product);
         this.router.navigateByUrl("/cart");
