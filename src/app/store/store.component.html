@@ -15,6 +15,9 @@
     [class.active]="cat == selectedCategory" (click)="changeCategory(cat)">
     {{cat}}
     </button>
+    <button class="btn btn-block btn-danger mt-5" routerLink="/admin">
+      Admin
+      </button>
     </div>
     <div class="col-9 p-2">
   <div *ngFor="let product of products" class="card m-1 p-1 bg-light">
@@ -42,7 +45,7 @@
     </select>
     </div>
     <div class="btn-group float-right">
-    <button *counter="let page of pageCount" (click)="changePage(page)"
+    <button *ngFor="let page of pageCount" (click)="changePage(page)"
     class="btn btn-outline-primary"
     [class.active]="page == selectedPage">
     {{page}}
